@@ -1,8 +1,18 @@
 //TODO: add the appropriate include statements (iostream and string)
-
+#include <iostream>
+#include <string>
 //TODO: create the main function
-{
+using namespace std;
+
+int main(){
+
+
     //TODO: make three variables: itemName (type string), price (type double), and quantity (type int)
+    string itemName;
+    double price;
+    int quantity;
+
+
 
     const double TAX_RATE = 0.07;
 
@@ -10,14 +20,20 @@
     std::cin >> itemName;
 
     //TODO: print the following to the screen: "Enter price per item: "
+    cout << "Enter price per item: ";
     //TODO: have the user enter the price
+    cin >> price;
 
     //TODO: print the following to the screen: "Enter quantity: "
+    cout<< "Enter quantity: ";
     //TODO: have the user enter the quantity
+    cin >> quantity;
 
     //TODO: Set values to the subtotal, tax, and total. The subtotal would be the total price before taxes. The tax would be the subtotal multiplied by the tax rate, and 
     //      the total would be the total plus the tax
-
+    const double subtotal=price*quantity;
+    const double tax=subtotal*TAX_RATE;
+    const double total=subtotal+tax;
     // Output
     std::cout << "\n----- RECEIPT -----\n";
     std::cout << "Item: " << itemName << std::endl;
@@ -29,4 +45,5 @@
     std::cout << "-------------------\n";
 
 //TODO: remember the return 0!
+    return 0;
 }
